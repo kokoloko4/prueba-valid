@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body >
+    <form action="/process" method="GET">
+	    <table id="persons">
+	    	<thead>
+	    		<tr>
+	    			<th></th>
+	    			<th>NOMBRE</th>
+	    			<th>APELLIDO</th>
+	    			<th>PROCESADO</th>
+	    		</tr>	
+	    	</thead>
+	    	<tbody>
+	    		<tr th:each="person: ${persons}">
+	    			<td> 
+	    				<input type="checkbox" name="processPerson" th:value="${person.id}">
+	    			</td>
+	    			<td th:text="${person.name}"/>
+	    			<td th:text="${person.lastName}"/>
+	    			<td th:text="${person.processed}"/>
+	    			<td/>
+	    		</tr>
+	    	</tbody>
+	    </table>
+	    <button>Procesar</button>
+    </form>
+</body>
+</html>

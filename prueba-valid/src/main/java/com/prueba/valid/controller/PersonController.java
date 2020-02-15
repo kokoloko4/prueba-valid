@@ -20,15 +20,15 @@ public class PersonController {
 	@Autowired
 	private IPersonService service;
 	
+	@GetMapping("/")
+	public String newPerson() {
+		return "index";
+	}
+	
 	@GetMapping("/list")
 	public String list(Model model) {
 		model.addAttribute("persons", service.list());
 		return "persons";
-	}
-	
-	@GetMapping("/add")
-	public String newPerson() {
-		return "index";
 	}
 	
 	@PostMapping("/new")

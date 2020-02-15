@@ -14,7 +14,7 @@ Para la aplicación web se utilizó la arquitectura Modelo-Vista-Controlador, de
 * Singleton: Con la utilización de la anotación `@AutoWired` que brinda spring se tiene una única instancia del objeto durante la ejecución de la aplicación.
 * Repository: A través de la anotación `@Repository` se indica a la clase que será el intermediario entre la base de datos y aquellas clases que quieran realizar operaciones sobre ella.
 * Principios SOLID: Para mantener las buenas prácticas de programación se siguen estos principios.
-##Endpoints
+## Endpoints
 
 |Endpoint	|Verbo HTTP|	Descripción|
 |---------|----------|-------------|
